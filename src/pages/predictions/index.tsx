@@ -5,6 +5,7 @@ import { getPredictionApi } from '@/services/predictionApi'
 import { PredictType } from '@/services/Types'
 import { CardPrediction } from '@/components/ui/cardPrediction'
 import Header from '@/components/ui/header'
+import searchIcon from '@/images/search.svg'
 export default function Predictions() {
   const [predictions, setPredictions] = useState(Array<PredictType>)
   const [inputsearch, setInputsearch] = useState('')
@@ -36,7 +37,7 @@ export default function Predictions() {
               onChange={e => setInputsearch(e.target.value)}
             />
             <button onClick={handleClick}>
-              <img src=".\src\images\search.svg"></img>
+              <img src={searchIcon}></img>
             </button>
           </S.ContainerSearch>
           <S.ContainerCards>

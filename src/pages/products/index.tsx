@@ -8,6 +8,7 @@ import { ProductListType, ProductReturnType } from '@/services/Types'
 import filter from '@/images/filter.svg'
 import { Button } from '@/components/ui'
 import Header from '@/components/ui/header'
+import searchIcon from '@/images/search.svg'
 export function Products() {
   const [inputsearch, setInputsearch] = useState('')
   const [search, setSearch] = useState('')
@@ -100,7 +101,7 @@ export function Products() {
               onChange={e => setInputsearch(e.target.value)}
             />
             <button onClick={handleClick}>
-              <img src=".\src\images\search.svg"></img>
+              <img src={searchIcon}></img>
             </button>
             <button
               className="dropdownButton"

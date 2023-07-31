@@ -4,7 +4,8 @@ import * as S from './styles'
 import { useNavigate } from 'react-router-dom'
 import { TableDashboardApiType, TableProps, TableType } from '@/services/Types'
 import { getTableApi } from '@/services/dashboardApi'
-
+import productIcon from '@/images/productIcon.svg'
+import clientIcon from '@/images/clientIcon.svg'
 type Prop = {
   type1: string
   type2: string
@@ -41,9 +42,9 @@ export default function TableContainer({ type1, type2, title }: Prop) {
         <S.ContainerHeader>
           <div>
             {title === 'produto' ? (
-              <img src="src\images\productIcon.svg" alt="" />
+              <img src={productIcon} alt="" />
             ) : (
-              <img src="src\images\clientIcon.svg" alt="" />
+              <img src={clientIcon} alt="" />
             )}
             <h4>{title[0].toUpperCase() + title.substring(1)}s</h4>
           </div>

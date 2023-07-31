@@ -6,7 +6,7 @@ import { Checkbox, FormControlLabel } from '@mui/material'
 import { useState } from 'react'
 import api from '@/services/configuration/api'
 import { useNavigate } from 'react-router-dom'
-
+import image from '@/images/imgLogin.jpg'
 export default function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -53,7 +53,7 @@ export default function Login() {
           </S.ContainerForm>
         </S.ContainerLeft>
         <S.ContainerRight>
-          <img src="src\images\imgLogin.jpg" alt="" />
+          <img src={image} alt="" />
         </S.ContainerRight>
       </S.Body>
     </>
