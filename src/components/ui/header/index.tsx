@@ -10,7 +10,7 @@ export default function Header() {
   const [dropdown, setDropdown] = useState(false)
   const navigate = useNavigate()
   function logoutHandle() {
-    localStorage.removeItem('AUTH_TOKEN')
+    localStorage.removeItem('TOKEN_AUTH')
     navigate('/')
   }
   return (
