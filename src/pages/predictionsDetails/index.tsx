@@ -17,6 +17,8 @@ import phone from '@/images/phone-telephone.svg'
 import history from '@/images/history.svg'
 import productLow from '@/images/productLow.svg'
 import Table from '@/components/ui/table'
+import Header from '@/components/ui/header'
+import BackButton from '@/components/ui/backButton'
 type Props = {
   id: string
 }
@@ -66,6 +68,8 @@ export function PredictionsDetails() {
     <S.Body>
       <Sidebar />
       <S.ContainerRight>
+        <Header />
+        <BackButton>Predições</BackButton>
         <S.Header>
           {clientDetails?.nome ? (
             <h2 className="clientName">{clientDetails?.nome}</h2>

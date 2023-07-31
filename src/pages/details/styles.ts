@@ -6,18 +6,7 @@ export const Body = styled.div`
 `
 export const ContainerRight = styled.div`
   display: block;
-  div {
-    display: flex;
-    flex-direction: row;
-    h3 {
-      font-family: Sora;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 140%; /* 28px */
-      letter-spacing: 0.2px;
-    }
-  }
+
   .productName {
     font-family: 'Sora';
     font-size: 36px;
@@ -25,6 +14,7 @@ export const ContainerRight = styled.div`
     font-weight: 700;
     line-height: 140%;
     color: #001c98;
+    margin: 32px;
   }
 `
 export const ContainerTables = styled.div`
@@ -68,6 +58,10 @@ export const ContainerCards = styled.div`
     }
   }
 
+  .trinta {
+    display: flex;
+    flex-direction: row;
+  }
   .last {
     border-radius: 24px;
     background-color: #ffffff;

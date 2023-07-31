@@ -5,6 +5,7 @@ import TableContainer from '@/components/ui/tableContainer'
 import { useEffect, useState } from 'react'
 import { getDashboardApi } from '@/services/dashboardApi'
 import { DashboardType, TableType } from '@/services/Types'
+import Header from '@/components/ui/header'
 
 export default function Dashboard() {
   const [resume, setResume] = useState<DashboardType>()
@@ -22,6 +23,7 @@ export default function Dashboard() {
       <S.Body>
         <Sidebar />
         <S.ContainerRight>
+          <Header />
           {resume && <ResumeContainer data={resume} />}
           <S.ContainerTables>
             <TableContainer

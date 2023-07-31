@@ -5,6 +5,9 @@ import { useEffect, useState } from 'react'
 import { getResumeDetailsApi, getTableDetailsApi } from '@/services/detailsApi'
 import { ResumeDetailsType, TableDetailsType } from '@/services/Types'
 import Table from '@/components/ui/table'
+import Header from '@/components/ui/header'
+import BackButton from '@/components/ui/backButton'
+
 type Props = {
   type: string
   id: string
@@ -41,11 +44,8 @@ export function Details() {
       <S.Body>
         <Sidebar />
         <S.ContainerRight>
-          <div>
-            <button onClick={() => history.back()}>Voltar</button>
-            <h3>Detalhamento</h3>
-          </div>
-
+          <Header />
+          <BackButton>Detalhamento</BackButton>
           <h2 className="productName">{resume?.nome}</h2>
           <S.ContainerCards>
             <S.Cards className="media">
@@ -54,7 +54,7 @@ export function Details() {
             </S.Cards>
             <S.Cards className="last">
               <h5>Ultimos 30 dias</h5>
-              <div>
+              <div className="trinta">
                 <h3>{resume?.ultimos30Dias}</h3>
                 <h5>{resume?.percentualUltimos30Dias}%</h5>
               </div>

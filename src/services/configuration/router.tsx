@@ -44,11 +44,11 @@ const router = createBrowserRouter([
     element: <Dashboard />
   },
   {
-    path: '/prediction',
+    path: '/predicoes',
     element: <Predictions />
   },
   {
-    path: '/products',
+    path: '/produtos',
     element: <Products />
   },
   {

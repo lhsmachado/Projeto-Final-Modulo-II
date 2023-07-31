@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { getPredictionApi } from '@/services/predictionApi'
 import { PredictType } from '@/services/Types'
 import { CardPrediction } from '@/components/ui/cardPrediction'
+import Header from '@/components/ui/header'
 export default function Predictions() {
   const [predictions, setPredictions] = useState(Array<PredictType>)
   const [inputsearch, setInputsearch] = useState('')
@@ -27,6 +28,7 @@ export default function Predictions() {
       <S.Body>
         <Sidebar />
         <S.ContainerRight>
+          <Header />
           <S.ContainerSearch>
             <input
               type="text"

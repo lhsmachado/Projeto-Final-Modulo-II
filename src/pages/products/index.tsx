@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom'
 import { ProductListType, ProductReturnType } from '@/services/Types'
 import filter from '@/images/filter.svg'
 import { Button } from '@/components/ui'
+import Header from '@/components/ui/header'
 export function Products() {
   const [inputsearch, setInputsearch] = useState('')
   const [search, setSearch] = useState('')
@@ -90,6 +91,7 @@ export function Products() {
     <S.Body>
       <Sidebar />
       <S.ContainerRight>
+        <Header />
         <S.Container>
           <S.ContainerSearch>
             <input
@@ -154,7 +156,9 @@ export function Products() {
           <Table headers={header}>
             {products &&
               products.map((dataTable: ProductListType) => (
-                <tr onClick={() => navigate(`produtos?id=${dataTable.id}`)}>
+                <tr
+                  onClick={() => navigate(`detalhes/produtos/${dataTable.id}`)}
+                >
                   <td style={{ paddingLeft: 20 }}>{dataTable.id}</td>
                   <td>{dataTable.nome}</td>
                   <td>{dataTable.classificacao}</td>
