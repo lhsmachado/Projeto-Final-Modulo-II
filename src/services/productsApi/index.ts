@@ -1,7 +1,6 @@
 import api from '@/services/configuration/api'
 import { ProductReturnType } from '../Types'
 const token = localStorage.getItem('TOKEN_AUTH')
-
 export const getProductsApi = async (
   search: string,
   classificacao: string,

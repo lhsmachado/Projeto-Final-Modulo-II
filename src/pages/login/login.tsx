@@ -19,6 +19,7 @@ export default function Login() {
     const token: TokenType = await loginApi(user)
     localStorage.setItem('TOKEN_AUTH', token.token)
     api.defaults.headers.common['X-TENANT-ID'] = 'arnia'
+    api.defaults.headers.common['Authorization'] = 'Bearer' + token
     navigate('/dashboard')
   }
 

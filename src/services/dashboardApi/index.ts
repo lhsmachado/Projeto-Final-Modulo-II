@@ -6,7 +6,8 @@ export const getDashboardApi = () =>
   api
     .get('/app/dashboard/resumo', {
       headers: {
-        Authorization: `Bearer ${token}`
+        Authorization: `Bearer ${token}`,
+        'X-TENANT-ID': 'arnia'
       }
     })
     .then(response => response.data)
@@ -15,7 +16,8 @@ export const getTableApi = ({ classification, title }: TableDashboardApiType) =>
   api
     .get('/app/dashboard/' + title + 's?classificacao=' + classification, {
       headers: {
-        Authorization: `Bearer ${token}`
+        Authorization: `Bearer ${token}`,
+        'X-TENANT-ID': 'arnia'
       }
     })
     .then(response => response.data)
