@@ -16,7 +16,7 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "allowImportingTsExtensions":false,
+    "allowImportingTsExtensions":true,
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": "./",
