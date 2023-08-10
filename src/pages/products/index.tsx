@@ -158,7 +158,7 @@ export function Products() {
             {products &&
               products.map((dataTable: ProductListType) => (
                 <tr
-                  onClick={() => navigate(`detalhes/produtos/${dataTable.id}`)}
+                  onClick={() => navigate(`/detalhes/produtos/${dataTable.id}`)}
                 >
                   <td style={{ paddingLeft: 20 }}>{dataTable.id}</td>
                   <td>{dataTable.nome}</td>
